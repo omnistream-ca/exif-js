@@ -34,5 +34,6 @@
   "devDependencies": {
     "bower": "^1.4.1",
     "mversion": "^1.10.0"
-  }
+  },
+  "typings": "exif.d.ts"
 }
