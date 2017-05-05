@@ -10,15 +10,6 @@
         this.EXIFwrapped = obj;
     };
 
-    if (typeof exports !== 'undefined') {
-        if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = EXIF;
-        }
-        exports.EXIF = EXIF;
-    } else {
-        root.EXIF = EXIF;
-    }
-
     var ExifTags = EXIF.Tags = {
 
         // version tags
@@ -1008,6 +999,16 @@
         define('exif-js', [], function() {
             return EXIF;
         });
+    }
+
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = EXIF;
+            exports.readFromBinaryFile = EXIF.readFromBinaryFile;
+        }
+        exports.EXIF = EXIF;
+    } else {
+        root.EXIF = EXIF;
     }
 }.call(this));
 
