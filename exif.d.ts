@@ -3,7 +3,7 @@ interface EXIFStatic {
     getTag(img: any, tag: any): any;
     getAllTags(img: any): any;
     pretty(img: any): string;
-    readFromBinaryFile(file: any): any;
+    readFromBinaryFile(file: ArrayBuffer): false | { [name: string]: any };
 }
 
 declare var EXIF : EXIFStatic;
